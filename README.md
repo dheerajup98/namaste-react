@@ -31,3 +31,20 @@
 - error handling 
 - https
 - code spliting
+
+
+
+# JSX
+
+ - jsx is not the part of react. its html like syntax but not html.
+ - this is not the valid javascript code so js engine not understand.
+ - Babel is convert to react.createelement => js object => after render they convert to html => browser can understand.
+
+# React components
+class component
+functional component
+
+- Functional component is an normal javascript functional in which they return some piece of jsx code.
+
+
+- if we are render component inside in another componenet is known as component composition. 

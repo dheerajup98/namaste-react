@@ -1,38 +1,46 @@
 import React from "react";
-import { ReactDOM } from "react-dom/client";
-
-// nesting element in react
-
-// example
-
-{/* <div id="parent">
-  <div id="child">
-     <h1>hello nesting element from react..</h1>
-  </div>
-</div> */}
+import ReactDOM  from "react-dom/client";
 
 
-const parent = React.createElement('div',{id:'parent'}, [
-    React.createElement('div',{id:'child1'}, [
-     React.createElement('h3',{},"i am h3 tag"),
-     React.createElement('h4',{},"i am an h4 tag"),
-    ]),
-     React.createElement('h1',{id:'child2'}), [
-     React.createElement('h2',{},"hello dheeraj"),
-     React.createElement('h5',{},"i am h5 tag")
-     ],
- ]);
- 
- 
- 
- 
- 
- // const heading1 = React.createElement('h3',{},"naamste duniya from React");
- 
- 
- // note:-)
- 
- // React.createElement is known as javascript object after root.render method they convert in  html which browser can understand.
- 
- const root = ReactDOM.createRoot(document.getElementById("root"));
- root.render(parent);
+// React element
+// jsx => 
+// const heading = <h1 id="heading">hello dheeraj 🚀</h1>
+
+
+// componenets
+// functional component
+// class component
+
+
+const jsxElement = (
+  <h2>it is jsx element or react element..</h2>
+)
+const number = 11666;
+
+const jsxElement2 = (
+  <h3>another jsx create element.. {number}, 
+  {jsxElement}</h3>
+);
+
+const Title = ()=>{
+  return(
+    <div>
+       <h2>Hello soumya i am 2nd functional component🚀🚀..</h2>
+       {jsxElement2}
+    </div>
+  )
+}
+
+
+
+const Heading = ()=>{
+  return(
+    <div>
+      <h1>Hello dheeraj from functional component🚀🚀</h1>
+      <Title/>
+    </div>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Heading/>)
